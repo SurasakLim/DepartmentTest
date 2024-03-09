@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DepartmentApp</string>
+    <string name="department_carousel">Department Carousel</string>
+    <string name="product_list">Product list : %s</string>
+    <string name="not_found">Not Found</string>
+    <string name="product_desc">Product Description</string>
+    <string name="close">Close</string>
+</resources>

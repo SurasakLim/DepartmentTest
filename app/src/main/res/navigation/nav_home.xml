@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/departmentFragment">
+
+    <fragment
+        android:id="@+id/departmentFragment"
+        android:name="com.example.departmentapp.presenter.department.DepartmentFragment"
+        tools:layout="@layout/department_fragment">
+
+        <action
+            android:id="@+id/toProductDetailDialog"
+            app:destination="@id/productDetailDialogFragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/productDetailDialogFragment"
+        android:name="com.example.departmentapp.presenter.dialog.ProductDetailDialogFragment">
+
+        <argument
+            android:name="productDetail"
+            app:argType="com.example.core.departmentModel.ProductBaseUiModel" />
+    </dialog>
+
+</navigation>
