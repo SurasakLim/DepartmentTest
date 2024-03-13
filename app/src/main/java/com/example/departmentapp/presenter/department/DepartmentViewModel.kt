@@ -68,7 +68,7 @@ class DepartmentViewModel @Inject constructor(
 
     fun getDepartmentData() {
         launch {
-            getDepartmentUseCase().map {
+            getDepartmentUseCase.run(Unit).map {
                 it.apply {
                     it.first().isSelected = true
                 }
@@ -81,7 +81,7 @@ class DepartmentViewModel @Inject constructor(
 
     fun getProductByDepartment(department: DepartmentUiModel) {
         launch {
-            getProductsUseCase.invoke(department).collectLatest { productData ->
+            getProductsUseCase.run(department).collectLatest { productData ->
                 _productUiState.emit(productData)
             }
         }
